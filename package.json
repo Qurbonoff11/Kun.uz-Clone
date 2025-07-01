@@ -1,0 +1,27 @@
+{
+  "name": "kun_uz-clone",
+  "version": "1.0.0",
+  "description": "This is Web site Kun.uz Clone",
+  "scripts": {
+    "dev": "npx parcel ./src/index.html --open",
+    "build": "npx parcel build ./src/index.html",
+    "sass": "npx sass --watch src/scss/style.scss:src/style/style.css",
+    "nodemon": "nodemon ./src/js/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qurbonoff11/Kun.uz-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qurbonoff11/Kun.uz-Clone/issues"
+  },
+  "homepage": "https://github.com/Qurbonoff11/Kun.uz-Clone#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "parcel": "^2.15.4",
+    "sass": "^1.89.2"
+  }
+}
