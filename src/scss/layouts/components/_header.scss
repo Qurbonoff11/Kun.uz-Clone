@@ -1,2 +1,140 @@
 @use "../../variables" as *;
 @use "../../mixins" as *;
+
+.advertising {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+
+  &__nav {
+    max-width: 1200px;
+    width: 100%;
+    height: 3rem;
+    background-color: $bg-white;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    @include flexBox(space-between, center, 0, row);
+
+    .nav__logo {
+      width: 100px;
+      height: auto;
+
+      img {
+        width: 70%;
+        object-fit: cover;
+      }
+    }
+
+    .nav__list {
+      @include flexBox(center, center, 1.2rem, row);
+      li {
+        a {
+          color: $txt-black;
+          font-weight: $fw-6;
+          transition: 0.3s all ease;
+
+          &:hover {
+            color: $txt-dark-blue;
+          }
+        }
+      }
+    }
+    .nav__utils {
+      @include flexBox(center, center, 1rem, row);
+
+      .lang__box {
+        position: relative;
+
+        .lang__btn {
+          @include button(
+            0.5rem,
+            $bg-white1,
+            $txt-black,
+            $fs-16,
+            $fw-5,
+            none,
+            0
+          );
+        }
+
+        .lang__list {
+          position: absolute;
+          top: 40px;
+          left: 0;
+          padding: 0.8rem;
+          background-color: $bg-white;
+
+          li {
+            a {
+              color: $txt-black;
+              font-weight: $fw-5;
+              font-size: $fs-16;
+              display: block;
+              width: 100%;
+              padding: 0.5rem;
+              text-align: center;
+
+              &:hover {
+                color: $txt-dark-blue;
+              }
+            }
+          }
+        }
+      }
+
+      .search__box {
+        position: relative;
+
+        .search__btn {
+          @include button(
+            0.5rem,
+            $bg-white1,
+            $txt-black,
+            $fs-16,
+            $fw-5,
+            none,
+            0
+          );
+        }
+
+        .search__input {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          border: none;
+          outline: none;
+          width: 0;
+          overflow: hidden;
+          transition: 0.3s all ease;
+          padding: 0.5rem;
+          border-radius: 8px;
+          background-color: $bg-white1;
+          opacity: 0;
+          height: 100%;
+        }
+
+        .search__btn + .search__input-active {
+          width: 250px;
+          opacity: 1;
+        }
+      }
+
+      .menu__btn {
+        @include button(0.5rem, $bg-white1, $txt-black, $fs-16, $fw-5, none, 0);
+      }
+    }
+  }
+}

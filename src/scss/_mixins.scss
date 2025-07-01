@@ -6,3 +6,14 @@
   flex-direction: $direction;
 }
 
+@mixin button($padding, $bg-color, $txt-color, $fs, $fw, $border, $radius){
+  padding: $padding;
+  background-color: $bg-color;
+  color: $txt-color;
+  font-size: $fs;
+  font-weight: $fw;
+  border: $border;
+  border-radius: $radius;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
